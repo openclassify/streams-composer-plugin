@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/streams-composer-plugin",
+    "name": "visiosoft/streams-composer-plugin",
     "description": "Composer plugin for streams platform.",
     "keywords": ["streams","composer","plugin"],
     "type": "composer-plugin",
@@ -11,10 +11,10 @@
         }
     ],
     "require": {
-        "composer-plugin-api": "^1.0"
+        "composer-plugin-api": "*"
     },
     "require-dev": {
-        "composer/composer": "1.0.*@dev",
+        "composer/composer": "*",
         "codeclimate/php-test-reporter": "dev-master",
         "henrikbjorn/phpspec-code-coverage": "~0.2",
         "phpspec/phpspec": "2.0.*@dev"
