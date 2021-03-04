@@ -29,9 +29,9 @@
     },
     "minimum-stability": "dev",
     "extra": {
-        "class": "Anomaly\\StreamsComposerPlugin\\Plugin",
+        "class": "Visiosoft\\StreamsComposerPlugin\\Plugin",
         "branch-alias": {
-            "dev-master": "0.1.x-dev"
+            "dev-master": "*"
         }
     }
 }
