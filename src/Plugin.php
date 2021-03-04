@@ -11,7 +11,7 @@ use Composer\Plugin\PluginInterface;
  *
  * @package Anomaly\StreamsComposerPlugin
  */
-class Plugin implements PluginInterface
+abstract class Plugin implements PluginInterface
 {
 
     /**
@@ -29,7 +29,7 @@ class Plugin implements PluginInterface
      * @param Composer    $composer
      * @param IOInterface $IOInterface
      */
-    public function activate(Composer $composer, IOInterface $io)
+    abstract public function activate(Composer $composer, IOInterface $io)
     {
         /** @var $installationManager InstallationManager */
         $installationManager = $composer->getInstallationManager();
@@ -47,7 +47,7 @@ class Plugin implements PluginInterface
      * @param IOInterface $io
      * @return LibraryInstaller
      */
-    public function getInstaller($class, Composer $composer, IOInterface $io)
+    abstract public function getInstaller($class, Composer $composer, IOInterface $io)
     {
         $installer = __NAMESPACE__ . '\\Installer\\' . $class;
         return new $installer($io, $composer);
