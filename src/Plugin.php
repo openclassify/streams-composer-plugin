@@ -29,7 +29,7 @@ abstract class Plugin implements PluginInterface
      * @param Composer    $composer
      * @param IOInterface $IOInterface
      */
-    abstract public function activate(Composer $composer, IOInterface $io)
+    public function activate(Composer $composer, IOInterface $io)
     {
         /** @var $installationManager InstallationManager */
         $installationManager = $composer->getInstallationManager();
@@ -47,7 +47,7 @@ abstract class Plugin implements PluginInterface
      * @param IOInterface $io
      * @return LibraryInstaller
      */
-    abstract public function getInstaller($class, Composer $composer, IOInterface $io)
+    public function getInstaller($class, Composer $composer, IOInterface $io)
     {
         $installer = __NAMESPACE__ . '\\Installer\\' . $class;
         return new $installer($io, $composer);
